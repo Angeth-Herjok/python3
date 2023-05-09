@@ -51,10 +51,13 @@ print(leap_year(2000))
 
 # 5.Write a Python program that takes a string as input and checks if it is a palindrome 
 # (reads the same forwards and backwards), ignoring spaces and punctuation.
-word=input("madam")
-reversed_word=(word[::-1])
-if word==reversed_word:
+
+word="madam"
+word=word
+reversed_word=reversed(word)
+if list(word)==list(reversed_word):
     print("Is palindrome")
 else:
-    print("Is not a palindrome")
+    print("Not palindrome")
+
 
