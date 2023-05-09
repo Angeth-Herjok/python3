@@ -24,10 +24,18 @@ print(median_number([1,2,5,4,3]))
 
 #3. Write a Python program that takes a list of numbers as input and 
 # outputs the second largest number in the list using conditional statements and a for loop.
-# def second_largest(nums):
-    
-    
-# print(second_largest([2,3,4,7,6,8,9]))
+def find_largest_number(nums):
+    second_largest=nums[0]
+    largest_number=nums[0]
+    for i in range(len(nums)):
+        if nums[i]>largest_number:
+            largest_number=nums[i]
+    for i in range(len(nums)):
+        if nums[i]>second_largest and nums[i] !=largest_number:
+            second_largest=nums[i]
+    return second_largest
+
+print(find_largest_number([2,3,4,7,6,8,9]))
 
 # 4.Write a Python program that takes a year as input and determines if it is a leap year
 
@@ -43,8 +51,7 @@ print(leap_year(2000))
 
 # 5.Write a Python program that takes a string as input and checks if it is a palindrome 
 # (reads the same forwards and backwards), ignoring spaces and punctuation.
-word="john"
-word=input("Enter word:")
+word=input("madam")
 reversed_word=(word[::-1])
 if word==reversed_word:
     print("Is palindrome")
